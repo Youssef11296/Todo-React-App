@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ddd;
 }
 
-.App-link {
-  color: #61dafb;
+/* Header */
+header {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  color: #fff;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header div {
+  max-width: 400px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin: 2rem 0;
+  pointer-events: none;
+  color: #888;
+}
+/* Todos Container */
+.todos-container {
+  position: relative;
+  min-height: 400px;
+  min-width: 400px;
+  background-color: #ccc;
+  padding: 2rem;
+  border-radius: 10px;
+  z-index: 200000000000;
+}
+
+/* Todo Item */
+.todo-item {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-item:not(:last-child) {
+  margin-bottom: 1.1rem;
+}
+
+.btns .complete,
+.btns .delete {
+  cursor: pointer;
+}
+.btns .complete {
+  margin: 0 0.3rem;
+}
+
+/* Form */
+form {
+  margin-top: 1.1rem;
+}
+
+form input[type="text"] {
+  width: 320px;
+  padding: 1.1rem;
+  font-size: 1.1rem;
+  color: #222;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+form input[type="text"]::placeholder {
+  color: #444;
+}
+
+form input[type="submit"] {
+  padding: 0.9rem 1.1rem;
+  margin-left: 0.4rem;
+  color: #222;
+  font-size: 1.1rem;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+form input[type="submit"]:hover {
+  background-color: wheat;
 }

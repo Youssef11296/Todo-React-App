@@ -1,0 +1,7 @@
+How To Emplement Your Redux Map !
+=====================================
+
+[1] Create The Store
+[2] Define Your Actions
+[3] Create one or more reducers
+[4] Set up the store
